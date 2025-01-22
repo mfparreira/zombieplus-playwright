@@ -1,22 +1,33 @@
-const {test: base, expect} = require('@playwright/test')
+import { Tvshows } from './actions/Tvshows'
 
-const {LoginPage} = require ('../pages/LoginPage')
-const {Toast} = require ('../pages/Components')
-const {MoviesPage} = require ('../pages/MoviesPage')
-const {LeadingPage} = require('../pages/LandingPage')
+const { test: base, expect } = require('@playwright/test')
+
+const { Movies } = require('./actions/Movies')
+const { Popup } = require('./actions/Components')
+const { Leads } = require('./actions/Leads')
+const { Login } = require('./actions/Login')
+const {Api} = require('./api')
 
 const test = base.extend({
     page: async ({page}, use) => {
-        await use({
-            ...page,
-            landing: new LeadingPage(page),
-            login: new LoginPage(page),
-            movies: new MoviesPage(page),
-            toast: new Toast(page)
 
+        const context = page
+        context['leads'] = new Leads(page)
+        context['login'] = new Login(page)
+        context['movies'] = new Movies(page)
+        context['popup'] = new Popup(page)  
+        context['tvshows'] = new Tvshows(page)    
 
-        })
+        await use(context)
+    },
+    request: async({ request }, use) =>{
+
+        const context = request
+        context ['api'] = new Api(request)
+        await context ['api'].setToken()
+        await use(context)
     }
+
 })
 
-export {test, expect}
+export { test, expect}

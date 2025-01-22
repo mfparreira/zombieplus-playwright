@@ -1,0 +1,52 @@
+{
+    "create": {
+        "title": "Stranger Things",
+        "overview": "A série segue um grupo de amigos enquanto eles enfrentam eventos sobrenaturais e mistérios em uma pequena cidade dos anos 80.",
+        "company": "Netflix",
+        "release_year": 2016,
+        "season": 4
+    },
+    "duplicate": {
+        "title": "Game of Thrones",
+        "overview": "Baseada nos livros de George R. R. Martin, a série narra a luta pelo controle do Trono de Ferro em Westeros.",
+        "company": "Netflix",
+        "release_year": 2011,
+        "season": 8
+    },
+    "remove": {
+        "title": "Breaking Bad",
+        "overview": "Um professor de química do ensino médio se torna um fabricante de metanfetamina após ser diagnosticado com câncer terminal.",
+        "company": "Netflix",
+        "release_year": 2008,
+        "season": 5
+    },
+    "to_search": {
+        "input": "The Mandalorian",
+        "output": [
+            "The Mandalorian"
+        ],
+        "data": [
+            {
+                "title": "The Mandalorian",
+                "overview": "Um caçador de recompensas solitário navega pela galáxia enquanto protege uma criança misteriosa.",
+                "company": "Netflix",
+                "release_year": 2019,
+                "season": 3
+            },
+            {
+                "title": "The Crown",
+                "overview": "Uma dramatização da vida da Rainha Elizabeth II e os eventos históricos que moldaram seu reinado.",
+                "company": "Netflix",
+                "release_year": 2016,
+                "season": 6
+            },
+            {
+                "title": "The Witcher",
+                "overview": "Um caçador de monstros, Geralt de Rívia, luta para encontrar seu lugar em um mundo cheio de perigos e criaturas místicas.",
+                "company": "Netflix",
+                "release_year": 2019,
+                "season": 3
+            }
+        ]
+    }
+}

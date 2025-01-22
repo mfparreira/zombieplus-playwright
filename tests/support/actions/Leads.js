@@ -1,5 +1,5 @@
 const { expect } = require('@playwright/test');
-export class LeadingPage {
+export class Leads {
 
     constructor(page){
         this.page = page
@@ -7,7 +7,7 @@ export class LeadingPage {
 
 
     async visit() {
-        await this.page.goto('http://localhost:3000');
+        await this.page.goto('/');
     }
 
     async openLeadModal() {
